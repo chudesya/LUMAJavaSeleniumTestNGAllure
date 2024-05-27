@@ -40,11 +40,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run java checkstyle
-      uses: nikitasavinov/checkstyle-action@0.6.0
-
     - name: Clone code from repo
       uses: actions/checkout@v4
       with: 
         fetch-depth: 0
-  
+        
+    - name: Run java checkstyle
+      uses: nikitasavinov/checkstyle-action@0.6.0 
