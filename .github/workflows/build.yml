@@ -1,9 +1,9 @@
-name: Build Java with Maven
+name: Java CI with Maven
 
 on:
   pull_request:
     branches: main
-
+    
 permissions:
   contents: write
   pages: write
@@ -12,20 +12,20 @@ permissions:
   checks: write
 
 jobs:
-  build: 
+  build:
     name: Build On
 
     strategy:
       max-parallel: 4
       matrix:
-        os: [ macos-latest, windows-latest, ubuntu-latest ]
-   
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+
     runs-on: ${{ matrix.os }}
 
     steps:
     - name: Clone code from repo
       uses: actions/checkout@v4
-      with: 
+      with:
         fetch-depth: 0
     
     - name: Set up JDK 17
@@ -34,7 +34,7 @@ jobs:
         java-version: '17'
         distribution: 'corretto'
         cache: maven
-
+        
     - name: Cache m2 dependencies
       uses: actions/cache@v4
       with:
@@ -45,17 +45,44 @@ jobs:
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Run tests
+      run: mvn test
 
+    - name: Load test report history
+      uses: actions/checkout@v4
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: Build test report
+      uses: simple-elf/allure-report-action@v1.7
+      if: ${{ matrix.os == 'ubuntu-latest' }}
+      with:
+        gh_pages: gh-pages
+        allure_history: allure-history
+        allure_results: target/allure-results
+
+    - name: Publish test report
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ matrix.os == 'ubuntu-latest' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
+      
   check-java-code-style:
-    name: Check Java code style
-
+    name: Check Java Code Style
+    
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Clone code from repo
       uses: actions/checkout@v4
-      with: 
+      with:
         fetch-depth: 0
-        
+      
     - name: Run java checkstyle
-      uses: nikitasavinov/checkstyle-action@0.6.0 
+      uses: nikitasavinov/checkstyle-action@0.6.0
