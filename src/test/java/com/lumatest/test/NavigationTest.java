@@ -11,7 +11,8 @@ public class NavigationTest extends BaseTest {
 
     @Test(
             groups = {"Smoke", "Regression"},
-            description = "TC-01 Open Base URL"
+            description = "TC-01 Open Base URL",
+            testName = "NAVIGATION | Open base URL"
     )
     @Story("Navigation")
     @Severity(SeverityLevel.BLOCKER)
@@ -39,7 +40,8 @@ public class NavigationTest extends BaseTest {
     @Test(  groups = {"Smoke", "Regression"},
             description = "TC-02 Top menu navigation",
             dataProvider = "navigationData",
-            dataProviderClass = TestData.class
+            dataProviderClass = TestData.class,
+            testName = "NAVIGATION | Navigate to top menu"
     )
     @Story("Navigation")
     @Severity(SeverityLevel.CRITICAL)

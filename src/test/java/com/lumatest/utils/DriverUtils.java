@@ -58,7 +58,6 @@ public class DriverUtils {
         if (driver != null) {
             driver.quit();
         }
-
         FirefoxDriver firefoxDriver = new FirefoxDriver(firefoxOptions);
 //        firefoxDriver.executeCdpCommand(
 //                "Network.enable", Map.of());
