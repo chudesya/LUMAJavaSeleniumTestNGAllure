@@ -9,10 +9,13 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Test(description = "TC-01 Open Base URL")
+    @Test(
+            groups = {"Smoke", "Regression"},
+            description = "TC-01 Open Base URL"
+    )
     @Story("Navigation")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("TC-01 Open Base URL")
+    @Description("To verify that the base URL and the title of the application are correct and as expected.")
     @Link(TestData.BASE_URL)
     public void testOpenBaseURL() {
         Allure.step("SetUp expected results");
@@ -34,10 +37,15 @@ public class NavigationTest extends BaseTest {
 
     }
 
-    @Test(dataProvider = "navigationData", dataProviderClass = TestData.class)
+    @Test(  groups = {"Smoke", "Regression"},
+            description = "TC-02 Top menu navigation",
+            dataProvider = "navigationData",
+            dataProviderClass = TestData.class
+    )
     @Story("Navigation")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("TC-02 Navigation Menu URL")
+    @Description("To verify that the top menu navigation on the website functions correctly by ensuring that" +
+            "clicking on menu items direct the user to the expected URL with the expected title.")
     @Link(TestData.BASE_URL)
     public void TestNavigationMenu(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
 
