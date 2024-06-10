@@ -3,8 +3,6 @@ package com.lumatest.base;
 import com.lumatest.utils.DriverUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,7 +14,6 @@ public abstract class BaseTest {
 
     @BeforeSuite
     protected void setupWebDriverManager() {
-
         WebDriverManager.chromedriver().setup();
         WebDriverManager.firefoxdriver().setup();
 //       WebDriverManager.edgedriver().setup();
@@ -49,6 +46,7 @@ public abstract class BaseTest {
             this.driver = null;
         } else {
             Reporter.log("INFO: Driver is NULL .", true);
+
         }
     }
 
