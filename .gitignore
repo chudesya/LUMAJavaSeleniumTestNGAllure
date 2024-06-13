@@ -229,3 +229,8 @@ bin/
 .env.test.local
 .env.production.local
 token.txt
+
+### Allure ###
+.allure
+allure-result/
+allure-report/
