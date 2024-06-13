@@ -37,7 +37,7 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Test(  groups = {"Smoke", "Regression"},
+    @Test(groups = {"Smoke", "Regression"},
             description = "TC-02 Top menu navigation",
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
