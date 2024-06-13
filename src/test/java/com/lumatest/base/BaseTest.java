@@ -48,12 +48,13 @@ public abstract class BaseTest {
 
             this.driver = null;
         } else {
+
             Reporter.log("INFO: Driver is NULL .", true);
 
         }
     }
 
-    public WebDriver getDriver() {
+    protected WebDriver getDriver() {
         return this.driver;
     }
 }

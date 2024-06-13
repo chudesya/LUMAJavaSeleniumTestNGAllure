@@ -7,7 +7,6 @@ public class FrameworkTest {
     public void testTest() {
 
         Assert.assertTrue(true);
-
     }
 
     @Ignore
@@ -15,6 +14,5 @@ public class FrameworkTest {
     public void testNegative() {
 
         Assert.assertTrue(false);
-
     }
 }
