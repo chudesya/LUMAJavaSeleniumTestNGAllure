@@ -20,13 +20,13 @@ public class ProductPageTest extends BaseTest {
                 .clickBagsSideMenu()
                 .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
 
-                final String productName = productPage.getProductNameText();
-                final String breadcrumbsMenuText = productPage.getBreadcrumbsMenuText();
+        final String productName = productPage.getProductNameText();
+        final String breadcrumbsMenuText = productPage.getBreadcrumbsMenuText();
 
         Allure.step("Verify actual '" + productName + "' equals to '" + TestData.DRIVEN_BACKPACK_PRODUCT_NAME + "'");
         Assert.assertEquals(productName, TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
 
-        Allure.step("Verify actual '"  + breadcrumbsMenuText +  "' equals to '" + TestData.DRIVEN_BACKPACK_PRODUCT_PAGE_BREADCRUMBS_MENU_TEXT + "'");
+        Allure.step("Verify actual '" + breadcrumbsMenuText + "' equals to '" + TestData.DRIVEN_BACKPACK_PRODUCT_PAGE_BREADCRUMBS_MENU_TEXT + "'");
         Assert.assertEquals(breadcrumbsMenuText, TestData.DRIVEN_BACKPACK_PRODUCT_PAGE_BREADCRUMBS_MENU_TEXT);
     }
 }

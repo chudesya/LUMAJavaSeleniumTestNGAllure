@@ -67,8 +67,8 @@ public class DriverUtils {
     }
 
     public static WebDriver createDriver(String browser, WebDriver driver) {
-        switch(browser) {
-            case "chrome" ->  {
+        switch (browser) {
+            case "chrome" -> {
                 return createChromeDriver(driver);
             }
             case "firefox" -> {

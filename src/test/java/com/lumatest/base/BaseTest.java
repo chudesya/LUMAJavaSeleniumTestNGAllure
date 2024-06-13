@@ -29,7 +29,7 @@ public abstract class BaseTest {
 
         this.driver = DriverUtils.createDriver(browser, this.driver);
         if (getDriver() == null) {
-            Reporter.log("ERROR: Unknown parameter 'browser' - " + browser + ".",  true);
+            Reporter.log("ERROR: Unknown parameter 'browser' - " + browser + ".", true);
 
             System.exit(1);
         }

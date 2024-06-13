@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SideMenu extends BreadcrumbsMenu{
+public class SideMenu extends BreadcrumbsMenu {
     @FindBy(linkText = "Bags")
     private WebElement bagsSideMenu;
 
