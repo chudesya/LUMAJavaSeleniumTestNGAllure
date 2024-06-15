@@ -51,21 +51,21 @@ cd LUMAJavaSeleniumTestNGAllure</code></pre>
 <pre><code>mvn allure:serve</code></pre>
 
 <h2>Project Structure</h2>
-LUMAJavaSeleniumTestNGAllure/
-│
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── ... (application logic, if any)
-│   │
-│   └── test/
-│       └── java/
-│           └── ... (test cases)
-│
-├── pom.xml
-├── testng.xml
-├── README.md
-└── ... (other files and directories)
+<p></p>LUMAJavaSeleniumTestNGAllure/</p>
+<p>│</p>
+<p>├── src/</p>
+<p>│   ├── main/</p>
+<p>│   │   └── java/</p>
+<p>│   │       └── ... (application logic, if any)</p>
+<p>│   │</p>
+<p>│   └── test/</p>
+<p>│       └── java/</p>
+<p>│           └── ... (test cases)</p>
+<p>│</p>
+<p>├── pom.xml</p>
+<p>├── testng.xml</p>
+<p>├── README.md</p>
+<p>└── ... (other files and directories)</p>
 <ul>
     <li><strong>src/main/java</strong>: Contains application logic (if any).</li>
     <li><strong>src/test/java</strong>: Contains test cases.</li>
