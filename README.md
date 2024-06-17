@@ -1,13 +1,7 @@
 # LUMAJavaSeleniumTestNGAllure
 [![Build Java with Maven](https://github.com/chudesya/LUMAJavaSeleniumTestNGAllure/actions/workflows/build.yml/badge.svg)](https://github.com/chudesya/LUMAJavaSeleniumTestNGAllure/actions/workflows/build.yml)
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMAJavaSeleniumTestNGAllure</title>
-</head>
 <body>
 
 <h1>LUMAJavaSeleniumTestNGAllure</h1>
@@ -31,19 +25,19 @@
 
 <h2>Installation</h2>
 <ol>
-    <li><strong>Clone the repository</strong>:
+    <li>Clone the repository:
         <pre><code>git clone https://github.com/chudesya/LUMAJavaSeleniumTestNGAllure.git
 cd LUMAJavaSeleniumTestNGAllure</code></pre>
     </li>
-    <li><strong>Install dependencies</strong>:
+    <li>Install dependencies:
         <pre><code>mvn clean install</code></pre>
     </li>
 </ol>
 
 <h2>Running Tests</h2>
-<p><strong>Using TestNG</strong>:</p>
+<p>Using TestNG:</p>
 <pre><code>mvn test</code></pre>
-<p><strong>Using specific TestNG suite</strong>:</p>
+<p>Using specific TestNG suite:</p>
 <pre><code>mvn test -DsuiteXmlFile=testng.xml</code></pre>
 
 <h2>Reporting</h2>
@@ -51,21 +45,25 @@ cd LUMAJavaSeleniumTestNGAllure</code></pre>
 <pre><code>mvn allure:serve</code></pre>
 
 <h2>Project Structure</h2>
-<p></p>LUMAJavaSeleniumTestNGAllure/</p>
-<p>│</p>
-<p>├── src/</p>
-<p>│   ├── main/</p>
-<p>│   │   └── java/</p>
-<p>│   │       └── ... (application logic, if any)</p>
-<p>│   │</p>
-<p>│   └── test/</p>
-<p>│       └── java/</p>
-<p>│           └── ... (test cases)</p>
-<p>│</p>
-<p>├── pom.xml</p>
-<p>├── testng.xml</p>
-<p>├── README.md</p>
-<p>└── ... (other files and directories)</p>
+<pre><code>LUMAJavaSeleniumTestNGAllure/
+├── src/
+│   ├── main/
+│   │   └── java/
+|   |         └── com/
+|   |           └── lumatest/
+|   |               └── model/
+│   └── test/
+│   |   └── java/
+|   |       └── com/
+|   |           └── lumatest/
+|   |               ├── base/
+|   |               ├── data/  
+|   |               ├── test/
+|   |               └── utils/
+├── pom.xml
+├── xmlSuits
+└── README.md
+</code></pre>
 <ul>
     <li><strong>src/main/java</strong>: Contains application logic (if any).</li>
     <li><strong>src/test/java</strong>: Contains test cases.</li>
@@ -74,7 +72,7 @@ cd LUMAJavaSeleniumTestNGAllure</code></pre>
 </ul>
 
 <h2>Contributing</h2>
-<p>Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code follows the project's coding standards and include appropriate tests.</p>
+<p>Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code follows the project's coding standards and includes appropriate tests.</p>
 
 <h2>License</h2>
 <p>This project is licensed under the MIT License.</p>
