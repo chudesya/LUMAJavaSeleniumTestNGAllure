@@ -3,9 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-
-<h1>LUMAJavaSeleniumTestNGAllure</h1>
-
 <h2>Overview</h2>
 <p>LUMAJavaSeleniumTestNGAllure is a project that integrates Selenium WebDriver with TestNG for automated testing, enhanced with Allure reporting. This setup allows for efficient test case management and comprehensive reporting, making it ideal for maintaining high-quality web applications.</p>
 
