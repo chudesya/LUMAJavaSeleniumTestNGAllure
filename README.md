@@ -65,7 +65,7 @@ cd LUMAJavaSeleniumTestNGAllure</code></pre>
     <li><strong>src/main/java</strong>: Contains application logic (if any).</li>
     <li><strong>src/test/java</strong>: Contains test cases.</li>
     <li><strong>pom.xml</strong>: Maven configuration file.</li>
-    <li><strong>testng.xml</strong>: TestNG suite configuration file.</li>
+    <li><strong>xmlSuits</strong>: Suits configuration files.</li>
 </ul>
 
 <h2>Contributing</h2>
