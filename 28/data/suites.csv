@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Jun 06 18:17:25 GMT 2024","Thu Jun 06 18:17:26 GMT 2024","1277","Surefire suite","Surefire test","com.lumatest.test.NavigationTest","com.lumatest.test.NavigationTest","TestNavigationMenu","TestNavigationMenu","TC-02 Navigation Menu URL"
-"passed","Thu Jun 06 18:17:24 GMT 2024","Thu Jun 06 18:17:24 GMT 2024","7","Surefire suite","Surefire test","TestTest","TestTest","testTest","testTest",""
-"passed","Thu Jun 06 18:17:26 GMT 2024","Thu Jun 06 18:17:28 GMT 2024","1321","Surefire suite","Surefire test","com.lumatest.test.NavigationTest","com.lumatest.test.NavigationTest","TestNavigationMenu","TestNavigationMenu","TC-02 Navigation Menu URL"
-"passed","Thu Jun 06 18:17:28 GMT 2024","Thu Jun 06 18:17:29 GMT 2024","764","Surefire suite","Surefire test","com.lumatest.test.NavigationTest","com.lumatest.test.NavigationTest","testOpenBaseURL","TC-01 Open Base URL","TC-01 Open Base URL"
-"unknown","Thu Jun 06 18:17:24 GMT 2024","Thu Jun 06 18:17:24 GMT 2024","1","Surefire suite","Surefire test","TestTest","TestTest","testNegative","testNegative",""
