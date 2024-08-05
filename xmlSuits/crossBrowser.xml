@@ -11,16 +11,6 @@
         </classes>
     </test>
 
-    <test name="ChromiumTest" verbose="10">
-        <parameter name="browser" value="chromium"/>
-        <classes>
-            <class name="com.lumatest.test.NavigationTest"/>
-            <class name="com.lumatest.test.ProductPageTest"/>
-            <class name="com.lumatest.test.SearchBoxTest"/>
-            <class name="FrameworkTest"/>
-        </classes>
-    </test>
-
     <test name = "FirefoxTest" verbose="10">
         <parameter name="browser" value="firefox"/>
         <classes>
