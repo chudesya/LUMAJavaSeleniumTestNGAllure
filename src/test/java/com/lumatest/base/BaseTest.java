@@ -24,15 +24,15 @@ public abstract class BaseTest {
 
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
-    protected void setupDriver(@Optional("chrome") String browser, ITestContext context, ITestResult result) {
+    protected void setupDriver(@Optional("chrome") String browser) {
         Reporter.log("______________________________________________________________________", true);
-
+//, ITestContext context, ITestResult result
         this.driver = DriverUtils.createDriver(browser, this.driver);
         this.threadLocalDriver.set(driver);
 
         Reporter.log("Test Thread ID: " + Thread.currentThread().getId(), true);
-        Reporter.log("TEST SUIT: " + context.getCurrentXmlTest().getSuite().getName(), true);
-        Reporter.log("RUN " + result.getMethod().getMethodName(), true);
+//        Reporter.log("TEST SUIT: " + context.getCurrentXmlTest().getSuite().getName(), true);
+//        Reporter.log("RUN " + result.getMethod().getMethodName(), true);
 
         if (getDriver() == null) {
             Reporter.log("ERROR: Unknown parameter 'browser' - '" + browser + "'.", true);
